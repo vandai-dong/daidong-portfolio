@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 import Home from "./components/Home/Home";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
 import About from "./components/About/About";
+import Projects from "./components/Projects/Projects";
 
 function App() {
   // Load dark mode preference from localStorage
@@ -35,8 +36,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          {/* <Route path="/project" element={<Projects />} />
-          <Route path="/resume" element={<Resume />} />
+          <Route path="/project" element={<Projects />} />
+          {/* <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Footer />} /> */}
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>

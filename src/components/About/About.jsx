@@ -9,15 +9,15 @@ function About() {
   return (
     <Container fluid>
       <Row className="pt-4">
-        <h1 className="text-center">
-          About Me{" "}
+        <div style={{ fontSize: 60 }} className="fw-bold text-center">
+          About Me
           <img
             src={smile}
             alt="Smiling face"
             style={{ width: "5%" }}
             className="moving-image"
           />
-        </h1>
+        </div>
       </Row>
 
       <Row className="pt-5">
@@ -43,7 +43,7 @@ function About() {
             , with minors in Information Systems and Actuarial Science.
           </div>
           <div className="pt-4 px-5" style={{ fontSize: 20 }}>
-            I’ve had the opportunity to work in diverse roles, from{" "} 
+            I’ve had the opportunity to work in diverse roles, from
             <span style={{ color: "#b078c7" }} className="fw-bold fst-italic">
               Graduate Data Scientist
             </span>{" "}
