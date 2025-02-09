@@ -27,13 +27,13 @@ function NavigationBar({ darkMode, setDarkMode }) {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto align-items-center">
             <Nav.Link
-              href="#home"
+              href="/"
               className={darkMode ? "text-light" : "text-dark"}
             >
               Home
             </Nav.Link>
             <Nav.Link
-              href="#about"
+              href="/about"
               className={darkMode ? "text-light" : "text-dark"}
             >
               About

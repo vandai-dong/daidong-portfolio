@@ -1,73 +1,46 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import smile from "../../assets/About/smile.png";
+import portrait from "../../assets/About/dai_pic.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../../style.css";
 
 function About() {
-  <Container>
-    <Row>
-      <h1>
-        About Me
-        <span>
-          <img src="../../assets/smile.png" alt="" />
-        </span>
+  return (
+    <Container fluid>
+    <Row className="pt-4">
+      <h1 className="text-center">
+        About Me <img src={smile} alt="Smiling face" style={{ width: "5%" }} className="moving-image" />
+        
       </h1>
     </Row>
 
-    <Row>
-      <Col>
+    <Row className="pt-5">
+      <Col md={9}>
+        <div className="px-5" style={{ fontSize: 20}}>
         I’m a passionate and driven developer with a strong background in
         software engineering and data science. I earned my master’s degree from
-        the University of Wollongong, specializing in Machine Learning, Big
-        Data, and Software Engineering. Before that, I completed my
-        undergraduate degree at Miami University, where I majored in Data
-        Science and Statistics, with minors in Information Systems and Actuarial
-        Science. I’ve had the opportunity to work in diverse roles, from
-        Graduate Data Scientist and Research Assistant to Software Engineer
-        Intern, each experience fueling my love for technology and coding. What
+        the <span className="fw-bold">University of Wollongong</span>, specialising in <span style={{color: "#b078c7"}} className="fw-bold fst-italic">Machine Learning and Big
+        Data</span>, and <span style={{color: "#b078c7"}} className="fw-bold fst-italic">Software Engineering</span>. Before that, I completed my undergraduate degree at <span className="fw-bold">Miami University</span>, where I majored in <span style={{color: "#b078c7"}} className="fw-bold fst-italic">Data
+        Science and Statistics</span>, with minors in Information Systems and Actuarial
+        Science.
+        </div>
+        <div className="pt-4 px-5" style={{ fontSize: 20}}>
+        I’ve had the opportunity to work in diverse roles, from
+        <span style={{color: "#b078c7"}} className="fw-bold fst-italic">Graduate Data Scientist</span> and <span style={{color: "#b078c7"}} className="fw-bold fst-italic">Research Assistant</span> to <span style={{color: "#b078c7"}} className="fw-bold fst-italic">Software Engineer
+        Intern</span>, each experience fueling my love for technology and coding. What
         excites me most about this field is the constant learning. It’s a
-        journey that challenges me to evolve every single day. I just finished
-        the last semester of my Master of Computer Science degree at the{" "}
-        <a href="https://www.uow.edu.au/" target="_blank">
-          University of Wollongong
-        </a>
-        , with specializations in{" "}
-        <i>
-          <b>Machine Learning and Big Data</b>
-        </i>
-        , and{" "}
-        <i>
-          <b>Software Engineering</b>
-        </i>
-        . During the summer of 2023-2024, I had the opportunity to intern at{" "}
-        <a href="https://www.csiro.au/en/" target="_blank">
-          CSIRO
-        </a>{" "}
-        as a research intern on a project using GenAI to create synthetic energy
-        data. For my undergraduate degree, I was a student at{" "}
-        <a href="https://miamioh.edu/" target="_blank">
-          Miami University
-        </a>{" "}
-        majoring in{" "}
-        <b>
-          <i>Data Science and Statistics</i>
-        </b>{" "}
-        and minoring in{" "}
-        <b>
-          <i>Information Systems</i>
-        </b>{" "}
-        and{" "}
-        <b>
-          <i>Actuarial Science</i>
-        </b>{" "}
-        from August 2017 to May 2021. After graduating, I had an opportunity to
-        work as a Junior Data Scientist at{" "}
-        <a href="https://onemount.com/" target="_blank">
-          One Mount Group
-        </a>{" "}
-        in Vietnam.
+        journey that challenges me to evolve every single day.
+        </div>
       </Col>
+
+      <Col md={3} className="d-flex justify-content-center align-items-center pt-3">
+  <img src={portrait} alt="Dai" style={{ width: "50%" }} className="rounded-circle img-fluid" />
+</Col>
+
     </Row>
-  </Container>;
+  </Container>
+  );
 }
 
 export default About;
