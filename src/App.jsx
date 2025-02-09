@@ -7,6 +7,7 @@ import {
 import { useState } from "react";
 import Home from "./components/Home/Home";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
+import About from "./components/About/About";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -24,8 +25,8 @@ function App() {
         <NavigationBar darkMode={darkMode} setDarkMode={setDarkMode} />
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/about" element={<About />} />
-          <Route path="/project" element={<Projects />} />
+          <Route path="/about" element={<About />} />
+          {/* <Route path="/project" element={<Projects />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Footer />} /> */}
           <Route path="*" element={<Navigate to="/" />} />

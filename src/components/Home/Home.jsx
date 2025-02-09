@@ -21,6 +21,7 @@ function Home() {
                   strings: [
                     "Aspiring Software Developer",
                     "Aspring AI Engineer",
+                    "Technology Enthusiast",
                   ],
                   autoStart: true,
                   loop: true,

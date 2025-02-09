@@ -1,33 +1,74 @@
 import PropTypes from "prop-types";
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
+import { useState } from "react";
+
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../../style.css";
 
 function NavigationBar({ darkMode, setDarkMode }) {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <Navbar
       expand="lg"
-      className={`${
-        darkMode ? "bg-dark" : "bg-body-secondary"
-      }`}
+      className={`${darkMode ? "bg-dark" : "bg-body-secondary"}`}
     >
       <Container>
-        <Navbar.Brand href="#home" className={darkMode ? "text-light" : "text:dark"}>Dai Dong</Navbar.Brand>
+        <Navbar.Brand
+          href="#home"
+          className={darkMode ? "text-light" : "text:dark"}
+        >
+          Dai Dong
+        </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"
-          data-bs-theme = {darkMode ? "dark" : "light"} 
+          data-bs-theme={darkMode ? "dark" : "light"}
         />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto align-items-center">
-            <Nav.Link href="#home" className={darkMode ? "text-light" : "text-dark"}>Home</Nav.Link>
-            <Nav.Link href="#about" className={darkMode ? "text-light" : "text-dark"}>About</Nav.Link>
-            <Nav.Link href="#projects" className={darkMode ? "text-light" : "text-dark"}>Projects</Nav.Link>
-            <Nav.Link href="#resume" className={darkMode ? "text-light" : "text-dark"}>Resume</Nav.Link>
-            <Nav.Link href="#contact" className={darkMode ? "text-light" : "text-dark"}>Contact</Nav.Link>
+            <Nav.Link
+              href="#home"
+              className={darkMode ? "text-light" : "text-dark"}
+            >
+              Home
+            </Nav.Link>
+            <Nav.Link
+              href="#about"
+              className={darkMode ? "text-light" : "text-dark"}
+            >
+              About
+            </Nav.Link>
+            <Nav.Link
+              href="#projects"
+              className={darkMode ? "text-light" : "text-dark"}
+            >
+              Projects
+            </Nav.Link>
+            <Nav.Link
+              href="#resume"
+              className={darkMode ? "text-light" : "text-dark"}
+            >
+              Resume
+            </Nav.Link>
+            <Nav.Link
+              href="#contact"
+              className={darkMode ? "text-light" : "text-dark"}
+            >
+              Contact
+            </Nav.Link>
 
             <Button
-              variant={darkMode ? "dark" : "light"}
+              variant={darkMode ? "dark" : "body-secondary"}
               onClick={() => setDarkMode(!darkMode)}
-              className="ms-2"
+              style={{
+                backgroundColor: isHovered
+                  ? darkMode
+                    ? "#585858"
+                    : "#D3D3D3"
+                  : "initial",
+              }}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
             >
               {darkMode ? (
                 <img
