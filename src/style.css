@@ -41,12 +41,17 @@
 
 /* ABOUT */
 @keyframes image-animation {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .moving-image {
   animation: image-animation 1.5s ease-in-out infinite;
 }
-
