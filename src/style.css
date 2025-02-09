@@ -9,32 +9,49 @@
   display: inline-block;
   animation: wave-animation 1s ease-in-out infinite;
   transform-origin: bottom center;
-  font-size: 5em !important;
+  font-size: 6em !important;
 }
 
 @keyframes wave-animation {
   0% {
-    transform: rotate(0deg); /* Initial position */
+    transform: rotate(0deg);
   }
   25% {
-    transform: rotate(10deg); /* Slight tilt to the right */
+    transform: rotate(10deg);
   }
   50% {
-    transform: rotate(0deg); /* Back to the original position */
+    transform: rotate(0deg);
   }
   75% {
-    transform: rotate(-10deg); /* Slight tilt to the left */
+    transform: rotate(-10deg);
   }
   100% {
-    transform: rotate(0deg); /* Back to the original position */
+    transform: rotate(0deg);
   }
 }
 
 .name {
-  color: #9f54bc;
+  color: #b078c7;
 }
 
 .type-writing {
   padding-top: 50px;
-  color: #9f54bc;
+  color: #b078c7;
+}
+
+/* ABOUT */
+@keyframes image-animation {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.moving-image {
+  animation: image-animation 1.5s ease-in-out infinite;
 }
