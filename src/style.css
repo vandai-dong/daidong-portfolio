@@ -9,7 +9,7 @@
   display: inline-block;
   animation: wave-animation 1s ease-in-out infinite;
   transform-origin: bottom center;
-  font-size: 5em !important;
+  font-size: 6em !important;
 }
 
 @keyframes wave-animation {

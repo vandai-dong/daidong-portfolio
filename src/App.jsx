@@ -4,13 +4,22 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 import Home from "./components/Home/Home";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
 import About from "./components/About/About";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  // Load dark mode preference from localStorage
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem("darkMode") === "true";
+  });
+
+  // Save dark mode preference to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("darkMode", darkMode);
+  }, [darkMode]);
 
   const themeStyles = {
     backgroundColor: darkMode ? "#333" : "#f8f9fa",
