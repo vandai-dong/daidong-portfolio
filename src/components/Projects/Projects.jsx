@@ -25,7 +25,7 @@ function Projects() {
             <Cards
               imgPath={lane_detection}
               title="Lane Detection Cross-Platform Mobile Application"
-              description="This project develops a budget-friendly lane detection mobile app for educational use, allowing users to experiment with algorithms like YOLOP, YOLOPv2, and U-Net. The app processes captured images on a server to provide detection results, helping learners evaluate algorithms efficiently. Trained models, including PSPNet and U-Net, have achieved strong performance on lane mark and drivable region detection tasks."
+              description="This project creates a cost-effective lane detection app for educational use, enabling users to test algorithms like YOLOP, YOLOPv2, and U-Net. Images are processed on a server for efficient evaluation, with trained models like PSPNet and U-Net excelling in lane and drivable region detection."
               ghLink=""
             />
           </Col>
