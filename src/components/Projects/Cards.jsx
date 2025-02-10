@@ -4,7 +4,6 @@ import { Card, Button } from "react-bootstrap";
 import { BsGithub } from "react-icons/bs";
 import PropTypes from "prop-types";
 
-
 function Cards(props) {
   return (
     <Card className="h-100">
@@ -38,7 +37,7 @@ function Cards(props) {
 
 Cards.propTypes = {
   imgPath: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired, 
+  title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   githubLink: PropTypes.string,
 };
