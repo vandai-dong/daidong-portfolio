@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Hello from "./Hello";
 import About from "../About/About";
 import Projects from "../Projects/Projects";
+import Footer from "../Footer/Footer";
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       <Hello />
       <About />
       <Projects />
+      <Footer />
     </section>
   );
 }

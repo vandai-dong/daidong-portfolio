@@ -2,6 +2,7 @@ import React from "react";
 import { Card, Button } from "react-bootstrap";
 // import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
+import PropTypes from "prop-types";
 
 function Cards(props) {
   return (
@@ -11,7 +12,7 @@ function Cards(props) {
         src={props.imgPath}
         style={{
           width: "100%",
-          height: "100%",
+          height: "300px",
           //    borderRadius: "20%",
           //    objectFit: "cover",
           display: "block",
@@ -33,5 +34,12 @@ function Cards(props) {
     </Card>
   );
 }
+
+Cards.propTypes = {
+  imgPath: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  githubLink: PropTypes.string,
+};
 
 export default Cards;
