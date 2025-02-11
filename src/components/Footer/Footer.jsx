@@ -20,7 +20,7 @@ function Footer() {
         Phone Number: 0403-770-879
       </Row>
 
-      <Row>
+      <Row class>
         <Col md={12} className="home-about-social">
           <ul className="home-about-social-links">
             <li className="social-icons">
