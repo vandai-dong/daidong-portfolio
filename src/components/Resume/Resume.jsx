@@ -1,8 +1,5 @@
 import React from "react";
-import { Container, Row } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
 import pdf from "../../assets/pdf/Resume_DaiDong.pdf";
-import { AiOutlineDownload } from "react-icons/ai";
 import { pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 
