@@ -1,6 +1,5 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
-// import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
 import PropTypes from "prop-types";
 

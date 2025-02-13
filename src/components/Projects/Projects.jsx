@@ -1,8 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Cards from "./Cards";
-import genai from "../../assets/Projects/genai.png";
-import lane_detection from "../../assets/Projects/lane_detection.jpg";
+import genai from "../../assets/img/Projects/genai.png";
+import lane_detection from "../../assets/img/Projects/lane_detection.jpg";
 
 function Projects() {
   return (
