@@ -39,7 +39,7 @@ function NavigationBar({ darkMode, setDarkMode }) {
               About
             </Nav.Link>
             <Nav.Link
-              href="/projects"
+              href="/project"
               className={darkMode ? "text-light" : "text-dark"}
             >
               Projects
