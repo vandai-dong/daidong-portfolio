@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import smile from "../../assets/img/About/smile.png";
 import portrait from "../../assets/img/About/dai_pic.jpg";

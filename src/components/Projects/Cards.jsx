@@ -1,4 +1,3 @@
-import React from "react";
 import { Card, Button } from "react-bootstrap";
 import { BsGithub } from "react-icons/bs";
 import PropTypes from "prop-types";
@@ -45,7 +44,7 @@ Cards.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   ghLink: PropTypes.string,
-  darkMode: PropTypes.string,
+  darkMode: PropTypes.bool.isRequired,
 };
 
 export default Cards;

@@ -49,12 +49,6 @@ function NavigationBar({ darkMode, setDarkMode }) {
             >
               Resume
             </Nav.Link>
-            <Nav.Link
-              href="/footer"
-              className={darkMode ? "text-light" : "text-dark"}
-            >
-              Contact
-            </Nav.Link>
 
             <Button
               variant={darkMode ? "dark" : "body-secondary"}
@@ -94,7 +88,6 @@ function NavigationBar({ darkMode, setDarkMode }) {
   );
 }
 
-// Add PropTypes validation
 NavigationBar.propTypes = {
   darkMode: PropTypes.bool.isRequired,
   setDarkMode: PropTypes.func.isRequired,

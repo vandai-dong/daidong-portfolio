@@ -36,7 +36,7 @@ function App() {
       <Router>
         <NavigationBar darkMode={darkMode} setDarkMode={setDarkMode} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home darkMode={darkMode} />} />
           <Route path="/about" element={<About />} />
           <Route path="/project" element={<Projects darkMode={darkMode} />} />
           <Route path="/resume" element={<Resume />} />

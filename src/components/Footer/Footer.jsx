@@ -65,7 +65,7 @@ function Footer({ darkMode }) {
 }
 
 Footer.propTypes = {
-  darkMode: PropTypes.string.isRequired,
+  darkMode: PropTypes.bool.isRequired,
 };
 
 export default Footer;

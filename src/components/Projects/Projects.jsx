@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PropTypes from "prop-types";
@@ -64,7 +63,7 @@ function Projects({ darkMode }) {
 }
 
 Projects.propTypes = {
-  darkMode: PropTypes.string,
+  darkMode: PropTypes.bool.isRequired,
 };
 
 export default Projects;
