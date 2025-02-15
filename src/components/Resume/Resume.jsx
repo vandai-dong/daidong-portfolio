@@ -14,10 +14,10 @@ function Resume() {
         alignItems: "center", // Centers vertically
         height: "100vh", // Full viewport height
         marginTop: "5%",
-        marginBottom: "7%"
+        marginBottom: "7%",
       }}
     >
-      <iframe src={pdf} width="70%" height="700px"  />
+      <iframe src={pdf} width="70%" height="700px" />
     </div>
   );
 }

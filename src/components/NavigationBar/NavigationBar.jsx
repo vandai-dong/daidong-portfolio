@@ -15,7 +15,7 @@ function NavigationBar({ darkMode, setDarkMode }) {
     >
       <Container>
         <Navbar.Brand
-          href="#home"
+          href="/"
           className={darkMode ? "text-light" : "text:dark"}
         >
           Dai Dong
