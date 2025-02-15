@@ -7,7 +7,9 @@ import "../../style.css";
 
 function Cards(props) {
   return (
-    <Card className={`h-100 shadow-lg card-hover ${props.darkMode ? "bg-dark" : ""} bg-gradient`}>
+    <Card
+      className={`h-100 shadow-lg card-hover ${props.darkMode ? "bg-dark" : ""} bg-gradient`}
+    >
       <Card.Img
         variant="top"
         src={props.imgPath}
@@ -21,13 +23,17 @@ function Cards(props) {
         alt="card-img"
       />
       <Card.Body>
-        <Card.Title className={props.darkMode ? "text-white" : "text:dark"}>{props.title}</Card.Title>
-        <Card.Text style={{ textAlign: "justify" }} className={props.darkMode ? "text-white" : "text:dark"}>
+        <Card.Title className={props.darkMode ? "text-white" : "text:dark"}>
+          {props.title}
+        </Card.Title>
+        <Card.Text
+          style={{ textAlign: "justify" }}
+          className={props.darkMode ? "text-white" : "text:dark"}
+        >
           {props.description}
         </Card.Text>
-        <Button variant="primary" href={props.ghLink} target="_blank">
-          <BsGithub /> &nbsp;
-          GitHub
+        <Button href={props.ghLink} target="_blank" className="custom-btn">
+          <BsGithub /> &nbsp; GitHub
         </Button>
       </Card.Body>
     </Card>

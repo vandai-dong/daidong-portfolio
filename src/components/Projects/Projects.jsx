@@ -1,13 +1,14 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import PropTypes from "prop-types";
 import Cards from "./Cards";
 import genai from "../../assets/img/Projects/genai.png";
 import lane_detection from "../../assets/img/Projects/lane-detection.jpg";
 import customer_churn from "../../assets/img/Projects/customer-churn.jpg";
 import ds_application from "../../assets/img/Projects/ds-job-applicant.jpg";
 
-function Projects({darkMode}) {
+function Projects({ darkMode }) {
   return (
     <Container fluid className="project-section">
       <Container>
@@ -61,5 +62,9 @@ function Projects({darkMode}) {
     </Container>
   );
 }
+
+Projects.propTypes = {
+  darkMode: PropTypes.string,
+};
 
 export default Projects;
