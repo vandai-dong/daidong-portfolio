@@ -13,8 +13,6 @@ function Home() {
       <Hello />
       <About />
       <Projects />
-      <Footer />
-      <Resume />
     </section>
   );
 }

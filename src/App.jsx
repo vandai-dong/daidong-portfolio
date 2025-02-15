@@ -10,6 +10,8 @@ import Home from "./components/Home/Home";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
+import Resume from "./components/Resume/Resume";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   // Load dark mode preference from localStorage
@@ -37,10 +39,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/project" element={<Projects />} />
-          {/* <Route path="/resume" element={<Resume />} />
-          <Route path="/contact" element={<Footer />} /> */}
+          <Route path="/resume" element={<Resume />} />
+          {/* <Route path="/contact" element={<Footer darkMode={darkMode} />} /> */}
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
+        <Footer darkMode={darkMode} />
       </Router>
     </div>
   );

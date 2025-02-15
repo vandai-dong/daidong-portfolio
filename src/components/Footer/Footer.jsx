@@ -4,9 +4,12 @@ import { CgMailOpen } from "react-icons/cg";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
-function Footer() {
+function Footer({ darkMode }) {
   return (
-    <Container>
+    // <Container className="bg-dark mw-100">
+    <Container
+      className={`mw-100 mt-5 ${darkMode ? "bg-dark text-light" : "bg-body-secondary text-dark"}`}
+    >
       <Row>
         <div style={{ fontSize: 40 }} className="fw-bold text-center">
           CONTACT

@@ -1,6 +1,7 @@
 import React from "react";
 import pdf from "../../assets/pdf/Resume_DaiDong.pdf";
 import { pdfjs } from "react-pdf";
+import Footer from "../Footer/Footer";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
