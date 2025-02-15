@@ -20,8 +20,8 @@ function Hello() {
             <Typewriter
               options={{
                 strings: [
-                  "Aspiring Software Developer",
-                  "Aspring AI Engineer",
+                  "Junior Software Developer",
+                  "Junior AI Engineer",
                   "Technology Enthusiast",
                 ],
                 autoStart: true,

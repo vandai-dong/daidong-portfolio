@@ -55,3 +55,87 @@
 .moving-image {
   animation: image-animation 1.5s ease-in-out infinite;
 }
+
+/* FOOTER */
+.home-about-social {
+  text-align: center !important;
+  padding-top: 25px;
+}
+
+.home-about-social-links {
+  justify-content: center !important;
+  display: inline-block !important;
+  position: relative !important;
+  padding-inline-start: 0 !important;
+}
+
+.home-social-icons {
+  position: relative !important;
+  display: inline-block !important;
+  width: 90px !important;
+  height: 90px !important;
+  text-align: center !important;
+  font-size: 3em !important;
+  line-height: 2em !important;
+  border-radius: 50% !important;
+  transition: 0.5s !important;
+  padding-bottom: 100%;
+}
+
+.home-social-icons::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #b078c7;
+  transition: 0.5s;
+  transform: scale(0.9);
+  z-index: -1;
+}
+
+.home-social-icons:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #b078c7;
+}
+
+.home-social-icons:hover {
+  color: #b078c7;
+  box-shadow: 0 0 5px #b078c7;
+  text-shadow: 0 0 2px #b078c7;
+}
+
+.social-icons {
+  display: inline-block !important;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.icon-colour {
+  color: #b078c7 !important;
+}
+
+/* CARD */
+.card-hover {
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.custom-btn {
+  background-color: #b078c7;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #c15ee8;
+}

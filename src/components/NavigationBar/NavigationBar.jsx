@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import { useState } from "react";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../style.css";
 
@@ -15,7 +14,7 @@ function NavigationBar({ darkMode, setDarkMode }) {
     >
       <Container>
         <Navbar.Brand
-          href="#home"
+          href="/"
           className={darkMode ? "text-light" : "text:dark"}
         >
           Dai Dong
@@ -39,22 +38,16 @@ function NavigationBar({ darkMode, setDarkMode }) {
               About
             </Nav.Link>
             <Nav.Link
-              href="#projects"
+              href="/project"
               className={darkMode ? "text-light" : "text-dark"}
             >
               Projects
             </Nav.Link>
             <Nav.Link
-              href="#resume"
+              href="/resume"
               className={darkMode ? "text-light" : "text-dark"}
             >
               Resume
-            </Nav.Link>
-            <Nav.Link
-              href="#contact"
-              className={darkMode ? "text-light" : "text-dark"}
-            >
-              Contact
             </Nav.Link>
 
             <Button
@@ -95,7 +88,6 @@ function NavigationBar({ darkMode, setDarkMode }) {
   );
 }
 
-// Add PropTypes validation
 NavigationBar.propTypes = {
   darkMode: PropTypes.bool.isRequired,
   setDarkMode: PropTypes.func.isRequired,

@@ -1,7 +1,6 @@
-import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import smile from "../../assets/About/smile.png";
-import portrait from "../../assets/About/dai_pic.jpg";
+import smile from "../../assets/img/About/smile.png";
+import portrait from "../../assets/img/About/dai_pic.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../style.css";
 
@@ -40,11 +39,14 @@ function About() {
             <span style={{ color: "#b078c7" }} className="fw-bold fst-italic">
               Data Science and Statistics
             </span>
-            , with minors in Information Systems and Actuarial Science.
+            , with minors in{" "}
+            <span className="fst-italic">Information Systems</span> and{" "}
+            <span className="fst-italic">Actuarial Science</span>.
           </div>
           <div className="pt-4 px-5" style={{ fontSize: 20 }}>
             I’ve had the opportunity to work in diverse roles, from
             <span style={{ color: "#b078c7" }} className="fw-bold fst-italic">
+              {" "}
               Graduate Data Scientist
             </span>{" "}
             and{" "}
