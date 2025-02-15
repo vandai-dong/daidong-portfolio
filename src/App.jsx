@@ -38,9 +38,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/project" element={<Projects />} />
+          <Route path="/project" element={<Projects darkMode={darkMode} />} />
           <Route path="/resume" element={<Resume />} />
-          {/* <Route path="/contact" element={<Footer darkMode={darkMode} />} /> */}
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer darkMode={darkMode} />

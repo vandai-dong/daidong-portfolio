@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import { useState } from "react";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../style.css";
 

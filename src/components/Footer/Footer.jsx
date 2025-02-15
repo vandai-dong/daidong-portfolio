@@ -1,12 +1,13 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import PropTypes from "prop-types";
 import { CgMailOpen } from "react-icons/cg";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function Footer({ darkMode }) {
   return (
-    // <Container className="bg-dark mw-100">
     <Container
       className={`mw-100 mt-5 ${darkMode ? "bg-dark text-light" : "bg-body-secondary text-dark"}`}
     >
@@ -62,5 +63,9 @@ function Footer({ darkMode }) {
     </Container>
   );
 }
+
+Footer.propTypes = {
+  darkMode: PropTypes.string.isRequired,
+};
 
 export default Footer;
