@@ -34,7 +34,7 @@ function App() {
   return (
     <div style={themeStyles}>
       <NavigationBar darkMode={darkMode} setDarkMode={setDarkMode} />
-      <Router>
+      <Router basename="/daidong-portfolio">
         <Routes>
           <Route path="/" element={<Home darkMode={darkMode} />} />
           <Route path="/about" element={<About darkMode={darkMode} />} />
