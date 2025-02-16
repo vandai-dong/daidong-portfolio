@@ -12,7 +12,7 @@
     "format": "prettier --write .",
     "check-format": "prettier --check .",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
