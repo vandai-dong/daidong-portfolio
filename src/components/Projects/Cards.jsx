@@ -1,5 +1,7 @@
 import { Card, Button } from "react-bootstrap";
 import { BsGithub } from "react-icons/bs";
+import { MdOutlineOndemandVideo } from "react-icons/md";
+import { IoDocumentText } from "react-icons/io5";
 import PropTypes from "prop-types";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../style.css";
@@ -25,15 +27,43 @@ function Cards(props) {
         <Card.Title className={props.darkMode ? "text-white" : "text:dark"}>
           {props.title}
         </Card.Title>
+
         <Card.Text
           style={{ textAlign: "justify" }}
           className={props.darkMode ? "text-white" : "text:dark"}
         >
           {props.description}
         </Card.Text>
-        <Button href={props.ghLink} target="_blank" className="custom-btn">
-          <BsGithub /> &nbsp; GitHub
-        </Button>
+
+        {props.hasGH && (
+          <Button
+            href={props.ghLink}
+            target="_blank"
+            className="custom-btn mx-2"
+          >
+            <BsGithub /> &nbsp; GitHub
+          </Button>
+        )}
+
+        {props.hasVid && (
+          <Button
+            href={props.vidLink}
+            target="_blank"
+            className={`custom-btn ${props.hasGH ? "mx-2" : ""}`}
+          >
+            <MdOutlineOndemandVideo /> &nbsp; Demo
+          </Button>
+        )}
+
+        {props.hasAnnotation && (
+          <Button
+            href={props.annotationLink}
+            target="_blank"
+            className={`custom-btn ${props.hasGH || props.hasVid ? "mx-2" : ""}`}
+          >
+            <IoDocumentText /> &nbsp; Document
+          </Button>
+        )}
       </Card.Body>
     </Card>
   );
@@ -43,7 +73,12 @@ Cards.propTypes = {
   imgPath: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  hasGH: PropTypes.bool.isRequired,
+  hasAnnotation: PropTypes.bool.isRequired,
+  hasVid: PropTypes.bool.isRequired,
   ghLink: PropTypes.string,
+  vidLink: PropTypes.string,
+  annotationLink: PropTypes.string,
   darkMode: PropTypes.bool.isRequired,
 };
 
