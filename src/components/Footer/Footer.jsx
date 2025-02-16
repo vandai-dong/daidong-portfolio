@@ -39,7 +39,7 @@ function Footer({ darkMode }) {
             </li>
             <li className="social-icons">
               <a
-                href="vandaidong@gmail.com"
+                href="mailto:vandaidong@gmail.com"
                 target="_blank"
                 rel="noreferrer"
                 className="icon-colour home-social-icons"
