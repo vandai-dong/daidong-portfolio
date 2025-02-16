@@ -8,29 +8,29 @@ import "../../style.css";
 
 function About({ darkMode }) {
   // Scrollbar styles based on darkMode
-    const scrollbarStyles = {
-      "::webkit-scrollbar": {
-        width: "12px",
-        height: "12px",
-      },
-      "::webkit-scrollbar-track": {
-        backgroundColor: darkMode ? "#333" : "#f1f1f1",
-        borderRadius: "10px",
-      },
-      "::webkit-scrollbar-thumb": {
-        backgroundColor: "#888",
-        borderRadius: "10px",
-        border: `3px solid ${darkMode ? "#333" : "#f1f1f1"}`,
-      },
-      "::webkit-scrollbar-thumb:hover": {
-        backgroundColor: darkMode ? "#555" : "#333",
-      },
-    };
-  
-    // Inject scroll bar styles into the document body
-    useEffect(() => {
-      const style = document.createElement("style");
-      style.innerHTML = `
+  const scrollbarStyles = {
+    "::webkit-scrollbar": {
+      width: "12px",
+      height: "12px",
+    },
+    "::webkit-scrollbar-track": {
+      backgroundColor: darkMode ? "#333" : "#f1f1f1",
+      borderRadius: "10px",
+    },
+    "::webkit-scrollbar-thumb": {
+      backgroundColor: "#888",
+      borderRadius: "10px",
+      border: `3px solid ${darkMode ? "#333" : "#f1f1f1"}`,
+    },
+    "::webkit-scrollbar-thumb:hover": {
+      backgroundColor: darkMode ? "#555" : "#333",
+    },
+  };
+
+  // Inject scroll bar styles into the document body
+  useEffect(() => {
+    const style = document.createElement("style");
+    style.innerHTML = `
         ::-webkit-scrollbar {
           width: ${scrollbarStyles["::webkit-scrollbar"].width};
           height: ${scrollbarStyles["::webkit-scrollbar"].height};
@@ -48,13 +48,13 @@ function About({ darkMode }) {
           background-color: ${scrollbarStyles["::webkit-scrollbar-thumb:hover"].backgroundColor};
         }
       `;
-      document.head.appendChild(style);
-  
-      // Cleanup on component unmount
-      return () => {
-        document.head.removeChild(style);
-      };
-    }, [darkMode]);
+    document.head.appendChild(style);
+
+    // Cleanup on component unmount
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, [darkMode]);
 
   return (
     <Container fluid>

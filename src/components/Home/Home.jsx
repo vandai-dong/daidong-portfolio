@@ -71,10 +71,10 @@ function Home({ darkMode }) {
   return (
     <section
       style={{
-        height: "100vh", // Full viewport height
-        overflowY: "scroll", // Allow scroll only on the section
-        scrollSnapType: "y mandatory", // Enable scroll snapping
-        scrollBehavior: "smooth", // Smooth scrolling
+        height: "90vh",
+        overflowY: "scroll",
+        scrollSnapType: "y mandatory",
+        scrollBehavior: "smooth",
       }}
     >
       <div
@@ -95,11 +95,14 @@ function Home({ darkMode }) {
       </div>
       <div
         style={{
-          minHeight: "100vh", // Ensuring Footer and Projects section is at least full height
+          minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between", // Ensures Footer is at the bottom
           scrollSnapAlign: "start",
         }}
       >
-        <Projects />
+        <Projects darkMode={darkMode} />
         <Footer darkMode={darkMode} />
       </div>
     </section>
