@@ -1,96 +1,60 @@
-import PropTypes from "prop-types";
-import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "../../style.css";
 
-function NavigationBar({ darkMode, setDarkMode }) {
-  const [isHovered, setIsHovered] = useState(false);
+function NavigationBar() {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Navbar
-      expand="lg"
-      className={`${darkMode ? "bg-dark" : "bg-body-secondary"}`}
-    >
-      <Container>
-        <Navbar.Brand
-          href="/"
-          className={darkMode ? "text-light" : "text:dark"}
-        >
-          Dai Dong
-        </Navbar.Brand>
-        <Navbar.Toggle
-          aria-controls="basic-navbar-nav"
-          data-bs-theme={darkMode ? "dark" : "light"}
-        />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto align-items-center">
-            <Nav.Link
-              href="/"
-              className={darkMode ? "text-light" : "text-dark"}
-            >
-              Home
-            </Nav.Link>
-            <Nav.Link
-              href="/about"
-              className={darkMode ? "text-light" : "text-dark"}
-            >
-              About
-            </Nav.Link>
-            <Nav.Link
-              href="/project"
-              className={darkMode ? "text-light" : "text-dark"}
-            >
-              Projects
-            </Nav.Link>
-            <Nav.Link
-              href="/resume"
-              className={darkMode ? "text-light" : "text-dark"}
-            >
-              Resume
-            </Nav.Link>
+    <nav className="flex items-center flex-wrap bg-white shadow-md p-2 md:min-h-15">
+      <h1 className="text-2xl md:text-3xl font-bold">Dai Dong</h1>
 
-            <Button
-              variant={darkMode ? "dark" : "body-secondary"}
-              onClick={() => setDarkMode(!darkMode)}
-              style={{
-                backgroundColor: isHovered
-                  ? darkMode
-                    ? "#585858"
-                    : "#D3D3D3"
-                  : "initial",
-              }}
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-            >
-              {darkMode ? (
-                <img
-                  width="30"
-                  height="30"
-                  // src="https://img.icons8.com/emoji/48/crescent-moon-emoji.png"
-                  src="https://img.icons8.com/plasticine/100/bright-moon.png"
-                  alt="crescent-moon"
-                />
-              ) : (
-                <img
-                  width="30"
-                  height="30"
-                  // src="https://img.icons8.com/ios/50/sun--v1.png"
-                  src="https://img.icons8.com/plasticine/100/sun--v1.png"
-                  alt="sun"
-                />
-              )}
-            </Button>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+      <button className="ml-auto md:hidden" onClick={() => setIsOpen(!isOpen)}>
+        <svg
+          className={`h-7 w-7 ${isOpen ? "hidden" : "flex"}`}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+
+        <svg
+          className={`h-7 w-7 ${!isOpen ? "hidden" : "flex"}`}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+
+      <ul
+        className={`w-full md:w-auto gap-1 ${
+          isOpen ? "flex flex-col mt-2 items-center text-center" : "hidden"
+        } md:flex md:flex-row md:gap-x-2 md:ml-auto md:text-xl`}
+      >
+        {["Home", "About", "Projects", "Resume"].map((text) => (
+          <li key={text}>
+            <a href="#" className="block px-2 py-1">
+              {text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }
-
-NavigationBar.propTypes = {
-  darkMode: PropTypes.bool.isRequired,
-  setDarkMode: PropTypes.func.isRequired,
-};
 
 export default NavigationBar;
