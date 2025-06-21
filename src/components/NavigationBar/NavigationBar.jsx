@@ -5,7 +5,7 @@ function NavigationBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex items-center flex-wrap bg-white shadow-md p-2 md:min-h-15">
+    <nav className="flex flex-wrap items-center bg-gray-200 p-2 shadow-md md:min-h-15">
       <h1 className="text-2xl md:text-3xl font-bold">Dai Dong</h1>
 
       <button className="ml-auto md:hidden" onClick={() => setIsOpen(!isOpen)}>

@@ -4,9 +4,9 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 
-// import Home from "./components/Home/Home";
+import Home from "./components/Home/Home";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
 // import About from "./components/About/About";
 // import Projects from "./components/Projects/Projects";
@@ -36,6 +36,12 @@ function App() {
     <div>
       {/* <NavigationBar darkMode={darkMode} setDarkMode={setDarkMode} /> */}
       <NavigationBar />
+      <Router basename="/daidong-portfolio">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </Router>
       {/* <Router basename="/daidong-portfolio">
         <Routes>
           <Route path="/" element={<Home darkMode={darkMode} />} />
