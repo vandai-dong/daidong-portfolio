@@ -1,3 +1,56 @@
+import smile from "../../assets/img/About/smile.png";
+
+function About() {
+  return (
+    <div className="flex flex-row">
+      <div className="pt-4 text-6xl font-bold text-center">
+        About Me
+        <img src={smile} alt="Smiling face" className="w-10" />
+      </div>
+      <div className="flex pt-5 flex-col">
+        <div>
+          I’m a passionate and driven developer with a strong background in
+          software engineering and data science. I earned my master’s degree
+          from the <span className="font-bold">University of Wollongong</span>,
+          specialising in{" "}
+          <span className="text-[#b078c7] font-bold italic">
+            Machine Learning and Big Data
+          </span>{" "}
+          and{" "}
+          <span className="text-[#b078c7] font-bold italic">
+            Software Engineering
+          </span>
+          . Before that, I completed my undergraduate degree at{" "}
+          <span className="font-bold">Miami University</span>, where I majored
+          in{" "}
+          <span className="text-[#b078c7] font-bold italic">
+            Data Science and Statistics
+          </span>
+          , with minors in <span className="italic">Information Systems</span>{" "}
+          and <span className="italic">Actuarial Science</span>. I've had the
+          opportunity to work in diverse roles, from{" "}
+          <span className="text-[#b078c7] font-bold italic">
+            Graduate Data Scientist
+          </span>{" "}
+          and{" "}
+          <span className="text-[#b078c7] font-bold italic">
+            Research Assistant
+          </span>{" "}
+          to{" "}
+          <span className="text-[#b078c7] font-bold italic">
+            Software Engineer Intern
+          </span>
+          , each experience fueling my love for technology and coding. What
+          excites me most about this field is the constant learning. It’s a
+          journey that challenges me to evolve every single day.
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default About;
+
 // import React, { useEffect } from "react";
 // import PropTypes from "prop-types";
 // import { Container, Row, Col } from "react-bootstrap";

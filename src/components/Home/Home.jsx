@@ -2,7 +2,7 @@ import Typewriter from "typewriter-effect";
 
 function Home() {
   return (
-    <container className="grid grid-cols-1 gap-4 px-8 pt-10 md:grid-cols-2 md:px-25 md:pt-30">
+    <div className="grid grid-cols-1 gap-4 px-8 pt-10 md:grid-cols-2 md:px-25 md:pt-30">
       <div className="flex flex-col gap-5 text-3xl md:gap-10 md:text-6xl">
         <div>Hello!</div>
         <div>
@@ -34,7 +34,7 @@ function Home() {
           👋🏻
         </div>
       </div>
-    </container>
+    </div>
   );
 }
 

@@ -8,7 +8,7 @@ import {
 
 import Home from "./components/Home/Home";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
-// import About from "./components/About/About";
+import About from "./components/About/About";
 // import Projects from "./components/Projects/Projects";
 // import Resume from "./components/Resume/Resume";
 // import Footer from "./components/Footer/Footer";
@@ -32,17 +32,19 @@ function App() {
   // };
 
   return (
-    // <div style={themeStyles}>
-    <div>
-      {/* <NavigationBar darkMode={darkMode} setDarkMode={setDarkMode} /> */}
+    <Router basename="/daidong-portfolio">
       <NavigationBar />
-      <Router basename="/daidong-portfolio">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
-      </Router>
-      {/* <Router basename="/daidong-portfolio">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
+/* <Router basename="/daidong-portfolio">
         <Routes>
           <Route path="/" element={<Home darkMode={darkMode} />} />
           <Route path="/about" element={<About darkMode={darkMode} />} />
@@ -51,9 +53,4 @@ function App() {
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer darkMode={darkMode} />
-      </Router> */}
-    </div>
-  );
-}
-
-export default App;
+      </Router> */
