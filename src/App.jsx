@@ -1,51 +1,20 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
-import { useState, useEffect } from "react";
+import React from 'react';
+import Header from './components/Header/Header';
+import About from './components/About/About';
+import Projects from './components/Projects/Projects';
+import Skills from './components/Skills/Skills';
+import Footer from './components/Footer/Footer';
 
-import Home from "./components/Home/Home";
-import NavigationBar from "./components/NavigationBar/NavigationBar";
-import About from "./components/About/About";
-import Projects from "./components/Projects/Projects";
-import Resume from "./components/Resume/Resume";
-import Footer from "./components/Footer/Footer";
-
-function App() {
-  // Load dark mode preference from localStorage
-  const [darkMode, setDarkMode] = useState(() => {
-    return localStorage.getItem("darkMode") === "true";
-  });
-
-  // Save dark mode preference to localStorage whenever it changes
-  useEffect(() => {
-    localStorage.setItem("darkMode", darkMode);
-  }, [darkMode]);
-
-  const themeStyles = {
-    backgroundColor: darkMode ? "#333" : "#f8f9fa",
-    color: darkMode ? "#fff" : "#333",
-    minHeight: "100vh",
-    transition: "0.3s",
-  };
-
+export default function App() {
   return (
-    <div style={themeStyles}>
-      <NavigationBar darkMode={darkMode} setDarkMode={setDarkMode} />
-      <Router basename="/daidong-portfolio">
-        <Routes>
-          <Route path="/" element={<Home darkMode={darkMode} />} />
-          <Route path="/about" element={<About darkMode={darkMode} />} />
-          <Route path="/project" element={<Projects darkMode={darkMode} />} />
-          <Route path="/resume" element={<Resume darkMode={darkMode} />} />
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
-        <Footer darkMode={darkMode} />
-      </Router>
+    <div className="font-serif bg-light-gray text-charcoal">
+      <Header />
+      <main className="container mx-auto px-4 py-16">
+        <About />
+        <Projects />
+        <Skills />
+      </main>
+      <Footer />
     </div>
   );
 }
-
-export default App;
