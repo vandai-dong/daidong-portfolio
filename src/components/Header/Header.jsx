@@ -1,23 +1,23 @@
-import React from 'react';
+import personalPic from '../../assets/img/About/dai-pic.jpg';
 
 export default function Header() {
   return (
-    <header className="bg-primary-mauve text-charcoal py-16 md:py-24 text-center rounded-b-3xl shadow-lg">
+    <header className="text-charcoal h-screen bg-[#b078c7] py-16 text-center shadow-lg snap-start md:py-24">
       <div className="container mx-auto px-4">
         <img
-          src="https://placehold.co/150x150/f0e1f5/b078c7?text=Profile"
-          alt="Your Name"
+          src={personalPic}
+          alt="Dai Dong"
           className="rounded-full mx-auto w-32 h-32 md:w-40 md:h-40 border-4 border-white shadow-md mb-6"
         />
         <h1 className="text-3xl md:text-5xl font-bold font-sans mb-2">
-          Your Name
+          Dai Dong
         </h1>
         <p className="text-lg md:text-xl font-serif">
           Building elegant software, one line of code at a time.
         </p>
         <a
           href="#projects"
-          className="inline-block mt-8 px-8 py-3 bg-accent-teal text-white font-sans font-semibold rounded-full shadow-lg transition-transform transform hover:scale-105"
+          className="inline-block mt-8 px-8 py-3 bg-[#a0d8c0] text-white font-sans font-semibold rounded-full shadow-lg transition-transform transform hover:scale-105"
         >
           View My Projects
         </a>

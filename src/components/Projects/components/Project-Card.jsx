@@ -18,7 +18,7 @@ export default function ProjectCard({
           {tech.map((t, i) => (
             <span
               key={i}
-              className="bg-primary-mauve text-white px-3 py-1 text-xs rounded-full"
+              className="bg-[#b078c7] text-white px-3 py-1 text-xs rounded-full"
             >
               {t}
             </span>
@@ -27,13 +27,13 @@ export default function ProjectCard({
         <div className="flex gap-4">
           <a
             href={live}
-            className="inline-block px-4 py-2 bg-accent-teal text-white rounded-lg text-sm font-semibold"
+            className="inline-block px-4 py-2 bg-[#a0d8c0] text-white rounded-lg text-sm font-semibold"
           >
             Live Demo
           </a>
           <a
             href={github}
-            className="inline-block px-4 py-2 bg-charcoal text-white rounded-lg text-sm font-semibold"
+            className="inline-block px-4 py-2 bg-[#2c323f] text-white rounded-lg text-sm font-semibold"
           >
             GitHub
           </a>
