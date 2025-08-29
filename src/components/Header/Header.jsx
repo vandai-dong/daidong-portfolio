@@ -1,4 +1,5 @@
 import personalPic from '../../assets/img/About/dai-pic.jpg';
+import Typewriter from "typewriter-effect";
 
 export default function Header() {
   return (
@@ -13,7 +14,17 @@ export default function Header() {
           Dai Dong
         </h1>
         <p className="text-lg md:text-xl font-serif">
-          Building elegant software, one line of code at a time.
+          <Typewriter
+          options={{
+            strings: [
+              "Junior Software Developer",
+              "Junior AI Engineer",
+              "Technology Enthusiast",
+            ],
+            autoStart: true,
+            loop: true,
+          }}
+        />
         </p>
         <a
           href="#projects"
