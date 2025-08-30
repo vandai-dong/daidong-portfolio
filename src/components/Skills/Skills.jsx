@@ -1,16 +1,13 @@
-import React from 'react';
-
 export default function Skills() {
   const skills = [
     'JavaScript',
     'Python',
-    'React',
-    'Node.js',
-    'HTML5',
-    'CSS3',
+    'HTML',
+    'CSS',
     'SQL',
     'Git',
     'Tailwind CSS',
+    'Java'
   ];
 
   return (

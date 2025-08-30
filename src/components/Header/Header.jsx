@@ -10,10 +10,10 @@ export default function Header() {
           alt="Dai Dong"
           className="rounded-full mx-auto w-32 h-32 md:w-40 md:h-40 border-4 border-white shadow-md mb-6"
         />
-        <h1 className="text-3xl md:text-5xl font-bold font-sans mb-2">
+        <h1 className="text-3xl md:text-7xl font-bold font-sans mb-2">
           Dai Dong
         </h1>
-        <p className="text-lg md:text-xl font-serif">
+        <p className="text-lg md:text-3xl font-serif">
           <Typewriter
           options={{
             strings: [
