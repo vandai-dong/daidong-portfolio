@@ -7,7 +7,7 @@ import Footer from './components/Footer/Footer';
 
 export default function App() {
   return (
-    <div className="font-serif bg-[#f5f5f5] text-charcoal h-screen">
+    <div className="font-serif bg-[#f5f5f5] text-[#2c323f]">
       <NavigationBar />
       <Header />
       <main className="container mx-auto px-4 py-16">

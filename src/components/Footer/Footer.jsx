@@ -8,14 +8,6 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex justify-center space-x-6 mb-4 gap-10">
           <a
-            href="mailto:vandaidong@gmail.com"
-            target="_blank"
-            rel="noreferrer"
-            className="text-4xl"
-          >
-            <CgMailOpen />
-          </a>
-          <a
             href="https://github.com/vandai-dong"
             target="_blank"
             rel="noreferrer"

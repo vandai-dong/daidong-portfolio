@@ -1,9 +1,7 @@
-import React from 'react';
-
 export default function About() {
   return (
-    <section id="about" className="mb-16 snap-start scroll-smooth">
-      <h2 className="text-3xl font-bold font-sans text-charcoal text-center mb-6">
+    <section id="about" className="mb-16">
+      <h2 className="text-3xl font-bold font-sans text-[#2c323f] text-center mb-6">
         About Me
       </h2>
       <div className="max-w-3xl mx-auto bg-white p-8 rounded-2xl shadow-lg text-lg text-gray-700 font-serif leading-relaxed">

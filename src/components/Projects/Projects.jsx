@@ -1,4 +1,3 @@
-import React from 'react';
 import ProjectCard from './components/Project-Card';
 
 export default function Projects() {
