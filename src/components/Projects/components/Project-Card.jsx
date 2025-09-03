@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function ProjectCard({
   image,
   title,
@@ -9,7 +7,7 @@ export default function ProjectCard({
   github,
 }) {
   return (
-    <div className="bg-white rounded-2xl shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+    <div className="transform overflow-hidden rounded-2xl bg-white shadow-lg transition-transform hover:scale-105">
       <img src={image} alt={title} className="w-full h-48 object-cover" />
       <div className="p-6">
         <h3 className="text-xl font-semibold font-sans mb-2">{title}</h3>
@@ -27,13 +25,13 @@ export default function ProjectCard({
         <div className="flex gap-4">
           <a
             href={live}
-            className="inline-block px-4 py-2 bg-[#a0d8c0] text-white rounded-lg text-sm font-semibold"
+            className="inline-block rounded-lg bg-[#a0d8c0] px-4 py-2 text-sm font-semibold text-white hover:bg-[#89c9ac]"
           >
             Live Demo
           </a>
           <a
             href={github}
-            className="inline-block px-4 py-2 bg-[#2c323f] text-white rounded-lg text-sm font-semibold"
+            className="inline-block rounded-lg bg-[#2c323f] px-4 py-2 text-sm font-semibold text-white hover:bg-[#242933]"
           >
             GitHub
           </a>

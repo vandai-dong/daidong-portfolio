@@ -28,7 +28,7 @@ export default function Header() {
         </p>
         <a
           href="#projects"
-          className="inline-block mt-8 px-8 py-3 bg-[#a0d8c0] text-white font-sans font-semibold rounded-full shadow-lg transition-transform transform hover:scale-105"
+          className="inline-block mt-8 px-8 py-3 bg-[#a0d8c0] text-white font-sans font-semibold rounded-full shadow-lg transition-transform transform hover:scale-105 hover:bg-[#89c9ac]"
         >
           View My Projects
         </a>
